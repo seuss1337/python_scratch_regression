@@ -1,17 +1,23 @@
 import math
 
+# alternate test case
 # x = [52.16, 55.23, 56.74, 58.12, 60.67]
 # y = [157.48, 164.56, 152.40, 150.94, 170.72]
+# test case, replace with read from excel file or cvs
 x = [17, 13, 12, 15, 16, 14, 16, 16, 18, 19]
 y = [94, 73, 59, 80, 93, 85, 66, 79, 77, 91]
+
 xmean = sum(x) / len(x)
 ymean = sum(y) / len(y)
+
 sumxminusxmeansq = 0.00
 sumyminusymeansq = 0.00
 sumxminusxmean = 0.00
 sumyminusymean = 0.00
 xXyY = 0.0
+# slope
 b = 0.0
+# Intercept
 a = 0.0
 # pearsons correlation coeeficient
 r = 0
