@@ -1,11 +1,31 @@
 import math
+import csv
+import os
+
+file = os.path.join("Resources", "text.csv")
+x = []
+y = []
+
+with open(file, mode="r") as values:
+    reader = csv.reader(values)
+    header = next(reader)
+    print(header)
+
+    for row in reader:
+        y.append(int(row[0]))
+        x.append(int(row[1]))
+
+
+## TODO:
+# Implement x and y with matplotlib ndarry
+# Implement read from file
 
 # alternate test case
 # x = [52.16, 55.23, 56.74, 58.12, 60.67]
 # y = [157.48, 164.56, 152.40, 150.94, 170.72]
 # test case, replace with read from excel file or cvs
-x = [17, 13, 12, 15, 16, 14, 16, 16, 18, 19]
-y = [94, 73, 59, 80, 93, 85, 66, 79, 77, 91]
+# x = [17, 13, 12, 15, 16, 14, 16, 16, 18, 19]
+# y = [94, 73, 59, 80, 93, 85, 66, 79, 77, 91]
 
 xmean = sum(x) / len(x)
 ymean = sum(y) / len(y)
